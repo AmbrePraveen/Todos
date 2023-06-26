@@ -145,7 +145,7 @@ export default function Index() {
                                         </div>
                                     </div>
                                     <div class="collapse" id="task1">
-                                        <div class="card-body">{item.desc}</div>
+                                        <div class="card-body">{item.data1.desc}</div>
                                     </div>
                                 </div>
                             </>
