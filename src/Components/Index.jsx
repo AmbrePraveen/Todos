@@ -8,8 +8,8 @@ export default function Index() {
     const [data1, setdata1] = useState({ name: "", desc: "", priority: "", emoji: "" })
     const [todoData, settodoData] = useState([])
     const [id, setid] = useState({ name: "", desc: "", priority: "", emoji: "" })
-    const AddTodo = async (data, Emoji) => {
-        const y = await axios.post("http://localhost:5000/Todos", { data, Emoji })
+    const AddTodo = async () => {
+        const y = await axios.post("http://localhost:5000/Todos", { data1, Emoji })
         getData()
     }
     const getData = async () => {
@@ -102,7 +102,7 @@ export default function Index() {
                                 class="btn btn-primary w-100 mt-3"
                                 onClick={e => {
 
-                                    AddTodo(data1, Emoji)
+                                    AddTodo()
                                 }}
                             >
                                 Add Todo
